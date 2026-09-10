@@ -1,4 +1,7 @@
 from vehiculo import Vehiculo
+from auto import Auto
+from moto import Moto
+from camion import Camion
 
 # Crear un vehículo con patente y año
 auto = Vehiculo("KXPR84", 2019)

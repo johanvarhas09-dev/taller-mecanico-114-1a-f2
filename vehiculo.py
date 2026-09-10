@@ -19,10 +19,18 @@ class Vehiculo:
         # Cambia el estado privado __en_taller a True indicando que ingresó al taller
         self.__en_taller = True
 
+    # Alias de compatibilidad para ingresar al taller
+    def ingresar_al_taller(self) -> None:
+        self.ingresar()
+
     # Método para registrar la entrega del vehículo fuera del taller
     def entregar(self) -> None:
         # Cambia el estado privado __en_taller a False indicando que ya no está en el taller
         self.__en_taller = False
+
+    # Alias de compatibilidad para entregar al cliente
+    def entregar_al_cliente(self) -> None:
+        self.entregar()
 
     # @property convierte este método en una propiedad de solo lectura, permitiendo acceder a la patente como vehiculo.patente
     @property
@@ -39,6 +47,12 @@ class Vehiculo:
     # @property convierte este método en una propiedad de solo lectura, permitiendo consultar si está en el taller como vehiculo.en_taller
     @property
     def en_taller(self) -> bool:
+        # Retorna el valor del atributo privado __en_taller
+        return self.__en_taller
+
+    # Alias de compatibilidad para acceder a _en_taller
+    @property
+    def _en_taller(self) -> bool:
         # Retorna el valor del atributo privado __en_taller
         return self.__en_taller
 
